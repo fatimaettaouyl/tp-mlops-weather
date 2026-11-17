@@ -1,0 +1,8 @@
+paths:
+  - file: https://raw.githubusercontent.com/fatimaettaouyl/tp-mlops-weather/main/weather_dataset_processed.csv
+transformations:
+  - read_delimited:
+      delimiter: ','
+      encoding: 'utf8'
+      header: all_files_same_headers
+  - drop_columns: ["Timestamp", "Location"]
